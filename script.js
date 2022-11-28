@@ -1,7 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword(){
+    TODO:
+    var specialCharacter = "!#$%&()*+,-./:;<=>?@[]^_`{|}~"
+    var letters = "abcdefghijklmnopqrstuvwxyz"
+    var numbers = "0123456789"
+    var upperLetters = letters.toUpperCase()
 
+}
 
 // Write password to the #password input
 function writePassword() {
