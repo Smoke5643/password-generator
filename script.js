@@ -12,7 +12,7 @@ function generatePassword(){
     var isNumber = confirm('Would you like to use numbers?');
     var howLong = Number(prompt('Between 8-128 characters, how long should the password be?'));
     var userPassword = '';  
-    var random = Math.floor(Math.random() * userPassword.length);
+    var random = '';
     
 
 
@@ -37,9 +37,9 @@ function generatePassword(){
     }
 
     if (howLong >= 8 && howLong <= 128){
-        console.log(howLong);
-        userPassword = random(howLong);
-    }   else{
+        random = Math.floor(Math.random() * userPassword.length);
+        userPassword = userPassword[random];
+        }   else{
         alert('Password must be between 8 and 128 characters long.');
         return '';
         }
