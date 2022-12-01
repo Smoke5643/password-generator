@@ -13,6 +13,6 @@ This application is a random password generator. It allows a user to choose from
 
 ## Visuals
 
-Preview of my portfolio
+Preview of the password generator
 
 ![image](assets/images/screenshot.png)
