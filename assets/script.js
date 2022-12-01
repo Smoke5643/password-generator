@@ -10,6 +10,13 @@ function generatePassword(){
     var isLowerCase = confirm('Would you like to use lowercase?');
     var isSpecial = confirm('Would you like to use special characters?');
     var isNumber = confirm('Would you like to use numbers?');
+
+    // Making sure the user chooses at least one character type
+    if (possiblePassword = ' '){
+        alert('You must choose at least one character type')
+        return '';
+    }
+    
     var howLong = prompt('Between 8-128 characters, how long should the password be?');
     var possiblePassword = '';  
     var random = '';
@@ -31,18 +38,14 @@ function generatePassword(){
     if (isNumber){
         possiblePassword += numbers;
     }
-   
+
+    
     // Making sure the user inputs within the desired range
     if (howLong < 8 || howLong > 128){
         alert ('Password must be between 8 and 128 characters');
         return '';
     }
     
-    // Making sure the user chooses at least one character type
-    if (possiblePassword = ' '){
-        alert('You must choose at least one character type')
-        return '';
-    }
     // Randomly choosing a password from the inputted length and the characters the user wants
     for (var i = 0; i < howLong; i++){
         random = Math.floor(Math.random() * possiblePassword.length);
