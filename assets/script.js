@@ -14,34 +14,36 @@ function generatePassword(){
     var possiblePassword = '';  
     var random = '';
     var userPassword = '';
-    var blank = '';
     
-    while (possiblePassword = blank){
-        alert('You must choose at least one character type')
-        br
-    }
-    // Making sure the user inputs within the desired range
-    if (howLong < 8 || howLong > 128){
-        alert ('Password must be between 8 and 128 characters');
-        return "";
-    }
     // Gathering password components from user input
     if (isUpperCase){
         possiblePassword += upperLetters;
     }
-  
+    
     if (isLowerCase){
         possiblePassword += letters;
     }
-  
+    
     if (isSpecial){
         possiblePassword += specialCharacters;
     }
-  
+    
     if (isNumber){
         possiblePassword += numbers;
     }
-    
+   
+    // Making sure the user chooses at least one character type
+    if (possiblePassword = ' '){
+        alert('You must choose at least one character type')
+        return '';
+    }
+
+    // Making sure the user inputs within the desired range
+    if (howLong < 8 || howLong > 128){
+        alert ('Password must be between 8 and 128 characters');
+        return '';
+    }
+
     // Randomly choosing a password from the inputted length and the characters the user wants
     for (var i = 0; i < howLong; i++){
         random = Math.floor(Math.random() * possiblePassword.length);
