@@ -32,18 +32,17 @@ function generatePassword(){
         possiblePassword += numbers;
     }
    
-    // Making sure the user chooses at least one character type
-    if (possiblePassword = ' '){
-        alert('You must choose at least one character type')
-        return '';
-    }
-
     // Making sure the user inputs within the desired range
     if (howLong < 8 || howLong > 128){
         alert ('Password must be between 8 and 128 characters');
         return '';
     }
-
+    
+    // Making sure the user chooses at least one character type
+    if (possiblePassword = ' '){
+        alert('You must choose at least one character type')
+        return '';
+    }
     // Randomly choosing a password from the inputted length and the characters the user wants
     for (var i = 0; i < howLong; i++){
         random = Math.floor(Math.random() * possiblePassword.length);
@@ -51,7 +50,6 @@ function generatePassword(){
         }
     
     return userPassword;
-
 }
 
 // Write password to the #password input
@@ -65,3 +63,4 @@ function writePassword() {
 
   // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+    
