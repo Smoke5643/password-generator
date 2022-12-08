@@ -12,7 +12,7 @@ function generatePassword(){
     var isNumber = confirm('Would you like to use numbers?');
 
     // Making sure the user chooses at least one character type
-    if (!upperLetters && !letters && !numbers && ! specialCharacters ){
+    if (!isUpperCase && !isLowerCase && !isNumber && !isSpecial){
         alert('You must choose at least one character type')
         return '';
     }
